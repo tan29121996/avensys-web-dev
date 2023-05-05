@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tan Si Yuan</title>
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+
+        .a {
+            width: 500px;
+        }
+
+        .h {
+            color: #1a76f3;
+            font-size: 52px;
+            font-family: "Klavika", sans-serif;
+        }
+
+        .p {
+            font-size: 28px;
+            font-family: "Klavika", sans-serif;
+        }
+
+        .container {
+            height: 715px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .inner {
+            height: 240px;
+            width: 300px;
+            border-radius: 10px;
+            background-color: white;
+            padding: 5px;
+            flex-direction: column;
+
+        }
+
+        .form {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 260px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        @media screen and (min-width: 600px) and (max-width: 750px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="a" style="margin: 30px">
+            <span class="h">facebook</span><br>
+            <span class="p">Facebook helps you connect and share with the people in your life</p>
+        </div>
+
+        <div class="b" style="margin: 30px">
+            <div class="inner">
+                <div style="            display: flex;
+                justify-content: center;
+                align-items: center; flex-direction: column;">
+                    <input type="text" placeholder="Email address"
+                        style="height: 10px; width: 270px; border: solid 1px lightgrey; padding: 10px; margin: 5px; border-radius: 5px;"></input>
+                    <input type="text" placeholder="Password"
+                        style="height: 10px; width: 270px; border: solid 1px lightgrey; padding: 10px; margin: 5px; border-radius: 5px;"></input>
+
+                    <div
+                        style="background-color: #1a76f3; padding: 10px; border-radius: 5px; width: 270px; font-size: 15px; color: white; text-align: center; margin-top: 10px">
+                        Login</div>
+
+                    <div style="margin: 10px; font-size: 12px"><a href="">Forgotten password?</a></div>
+                </div>
+
+                <hr style="align-self: flex-start;">
+                <div style="width: 100%; display: flex; justify-content: center;">
+                    <div
+                        style="background-color: #42b72a; padding: 10px; border-radius: 5px; font-size: 15px; color: white; text-align: center; margin: 5px">
+                        Create new account</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Link</title>
+    <style>
+        #hover:hover{
+            color: green;
+        }
+        a:visited{
+            color:blueviolet;
+        }
+        #active:active{
+            color:red;
+        }
+        div{
+            display: inline;
+        }
+        span{
+            background-color: #9bce32;
+        }
+    </style>
+</head>
+<body>
+    <h1>Displaying the output on the same webpage</h1>
+    <div>Open the link on the same tab: </div>
+    <a href="https://www.google.com/imghp" target="_self">Visit ABC Website..!</a>
+
+    <h1>Displaying the output on the same webpage but new tab</h1>
+    <div>Open the link on new tab: </div>
+    <a href="https://www.google.com/imghp" target="_blank">Visit ABC Website..!</a>
+
+    <h1>Use the Image as the link</h1>
+    <a href="https://www.google.com/imghp"><img src="image.png" width="200px"></a>
+    <div>Click on the image to navigate</div>
+
+    <h1>Link states</h1>
+    <div>click on the link </div>
+    <a id="active" href="https://www.google.com/imghp" target="_self">ABC Website</a>
+
+    <h1>Link states</h1>
+    <div>click on the link </div>
+    <a style="text-decoration: none;" href="https://www.google.com/imghp" target="_self" >ABC Website</a>
+
+    <h1>Link states</h1>
+    <div>click on the link </div>
+    <a id="hover" href="https://www.google.com/imghp" target="_self" >ABC Website</a>
+
+    <br>
+    <br>
+
+    <span>Hello ABC..!</span>
+    <span>Hello ABC..!</span>
+    <span>Hello ABC..!</span>
+    <span>Hello ABC..!</span>
+    <span>Hello ABC..!</span>
+
+    <br>
+    <br>
+
+    <span style="display: block; background-color: #ffc4cc;">Hello ABC..!</span>
+    <span style="display: block; background-color: #ffc4cc;">Hello ABC..!</span>
+    <span style="display: block; background-color: #ffc4cc;">Hello ABC..!</span>
+    <span style="display: block; background-color: #ffc4cc;">Hello ABC..!</span>
+    <span style="display: block; background-color: #ffc4cc;">Hello ABC..!</span>
+
+    <br>
+    <br>
+
+    <a href="#pagefour">Jump to Chapter 4</a>
+    <br>
+    <a href="#pagesix">Jump to Chapter 6</a>
+
+    <h1 id="pagetop1">Chapter 1</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis sit labore, omnis deleniti dolorem voluptate. Quod error placeat dolorum sapiente porro similique, doloribus sed hic, non aperiam distinctio! Omnis, earum?</p>
+
+    <h1>Chapter 2</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis sit labore, omnis deleniti dolorem voluptate. Quod error placeat dolorum sapiente porro similique, doloribus sed hic, non aperiam distinctio! Omnis, earum?</p>
+
+    <h1>Chapter 3</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis sit labore, omnis deleniti dolorem voluptate. Quod error placeat dolorum sapiente porro similique, doloribus sed hic, non aperiam distinctio! Omnis, earum?</p>
+
+    <h1 id="pagefour">Chapter 4</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis sit labore, omnis deleniti dolorem voluptate. Quod error placeat dolorum sapiente porro similique, doloribus sed hic, non aperiam distinctio! Omnis, earum?</p>
+
+    <h1 id="pagefive">Chapter 5</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis sit labore, omnis deleniti dolorem voluptate. Quod error placeat dolorum sapiente porro similique, doloribus sed hic, non aperiam distinctio! Omnis, earum?</p>
+
+    <h1 id="pagesix">Chapter 6</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis sit labore, omnis deleniti dolorem voluptate. Quod error placeat dolorum sapiente porro similique, doloribus sed hic, non aperiam distinctio! Omnis, earum?</p>
+</body>
+</html>

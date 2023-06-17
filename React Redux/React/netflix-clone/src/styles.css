@@ -1,0 +1,11 @@
+body {
+    background: black
+}
+
+a:hover {
+    color: red;
+}
+
+.display::-webkit-scrollbar {
+    display: none
+}

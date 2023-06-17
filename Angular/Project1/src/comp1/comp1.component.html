@@ -1,0 +1,95 @@
+<p>comp1 works!</p>
+
+<!-- <div [ngSwitch]="superpower" [ngStyle]="{'color':'green'}">
+    <div *ngSwitchCase="'Manage Man'">This is the power of Manage Man</div>
+    <div *ngSwitchCase="'Invest Man'">This is the power of Invest Man</div>
+    <div *ngSwitchCase="'Entertain Man'">This is the power of Entertain Man</div>
+    <div *ngSwitchCase="'Engage Man'">This is the power of Engage Man</div>
+    <div *ngSwitchCase="'Govern Man'">This is the power of Govern Man</div>
+</div>
+
+<div [ngStyle]="{'color': r, 'background-color': g}">
+    This is ngStyle structural directive
+</div>
+
+<div [ngStyle]="{color: r === 'red' ? 'red' : 'blue'}">
+    This is ngStyle structural directive
+</div>
+
+<div [ngStyle]="{color: r === 'red' ? 'red' : 'blue'}">
+    Normal div
+</div>
+
+<h1 class='c1'>{{sentence}}</h1>
+
+<div [ngClass]="class1">This is an NgClass import</div>
+<br>
+<div [ngClass]="changeClass === true ? class1 : class2">This is an NgClass import</div>
+<br>
+<div [ngClass]="{c4:true, c2:false, c1:true}">This is an NgClass import</div>
+
+<div [innerHTML]="sentence">
+
+</div>
+
+<h1 [title]="h">Heading</h1>
+
+<h2 [style.color]="g">{{h}}</h2>
+
+<table style="background-color: grey">
+    <tr>
+        <td>One</td>
+        <td>Two</td>
+        <td>Three</td>
+    </tr>
+    <tr>
+        <td [attr.colspan]="val">Four</td>
+        <td>Six</td>
+    </tr>
+</table>
+
+<button (click)="hello()">Click me</button>
+
+<div (mouseover)="a(1, 2, 'str')">
+    Mouse over
+</div>
+
+<input [(ngModel)]="superpower"><span>{{superpower}}</span>
+
+<p [innerHTML]="superpower"></p>
+<br>
+
+<button mat-button color="primary">Primary</button>
+
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle value="bold">Bold</mat-button-toggle>
+    <mat-button-toggle value="italic">Italic</mat-button-toggle>
+    <mat-button-toggle value="underline">Underline</mat-button-toggle>
+</mat-button-toggle-group> -->
+
+{{audi}}<br>
+{{bmw}}<br>
+{{ford}}<br>
+
+<h2>Angular pipes</h2>
+
+<div>
+    {{lower_case | lowercase}}
+    {{upper_case | uppercase}}
+</div>
+
+<div>
+    {{date_exm | date : 'long' | lowercase}}
+</div>
+
+<div>
+    {{obj | json | uppercase}}
+</div>
+
+<div>
+    {{num_val | currency : 'CAD'}}
+</div>
+
+<div>
+    {{num_per | percent : '3.1-4'}}
+</div>

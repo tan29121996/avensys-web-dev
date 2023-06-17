@@ -1,0 +1,47 @@
+<form [formGroup]="addForm">
+  <table>
+    <tr>
+      <label>First Name:</label>
+      <input type="text" formControlName="one">
+      <span style="color: red; margin-left: 5px"
+        *ngIf="addForm.get('one').hasError('required') && addForm.get('one').touched">*required</span>
+      <span style="color: orange; margin-left: 5px"
+        *ngIf="addForm.get('one').hasError('minlength') && addForm.get('one').touched">*Must have minimum of 5
+        characters</span>
+      <span style="color: orange; margin-left: 5px"
+        *ngIf="addForm.get('one').hasError('maxlength') && addForm.get('one').touched">*Only a maximum of 10 characters
+        is allowed</span>
+    </tr>
+    <tr>
+      <label>Last Name:</label>
+      <input type="text" formControlName="two">
+    </tr>
+    <tr>
+      <label>Description:</label>
+      <textarea formControlName="desc"></textarea>
+    </tr>
+
+    <!-- <tr>
+      <div formArrayName="users">
+        <div *ngFor="let c of addForm.controls['users']['controls']; let i = index">
+          <input type="text" [formControlName]="i">
+        </div>
+      </div>
+    </tr> -->
+
+    <tr>
+      <div formArrayName="users">
+        <div *ngFor="let c of addForm.controls['users']['controls']; let i = index;" [formGroupName] = "i">
+          <input type="text" formControlName="name">
+          <input type="text" formControlName="marks" (blur) = "assign(i)">
+          <input type="text" formControlName="branch">
+          <button (click)="removeElement(i)">Remove</button>
+        </div>
+      </div>
+    </tr>
+
+  </table>
+  <button (click)="addval()" [disabled]="!addForm.valid">Click</button>
+  <button (click)="resetForm()">Reset</button>
+  <button (click)="addElement()">Add form elements</button>
+</form>

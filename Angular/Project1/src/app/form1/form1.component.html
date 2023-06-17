@@ -1,0 +1,20 @@
+<br>
+<form #addForm="ngForm" (submit)="func1(addForm)">
+    <label>First Name:</label>
+    <input type="text" [(ngModel)]="firstname" name="firstname" minlength="5" required><br><br>
+    
+    <label>Select Option:</label>
+    <select name="option" [(ngModel)]="option">
+      <option value = "1">Option 1</option>
+      <option value = "2">Option 2</option>
+    </select><br><br>
+    
+    <input type="checkbox" [(ngModel)]="checkbox" name="checkbox">
+    Agree for terms and conditions<br><br>
+    
+    <textarea [(ngModel)]="description" name="description"></textarea><br><br>
+    
+    <button type="submit" [disabled]="!addForm.valid">Submit</button><br><br>
+    <button (click) = "resetForm(addForm)">Reset</button>
+    <button (click) = "setValues(addForm)">Set Values</button>
+  </form>

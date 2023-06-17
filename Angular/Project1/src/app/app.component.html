@@ -1,0 +1,68 @@
+<!-- <h1>This is the App.html</h1> -->
+
+<router-outlet></router-outlet>
+
+<!-- <router-outlet name = "channel1"></router-outlet>
+
+<router-outlet name = "channel2"></router-outlet> -->
+
+<!-- <div *ngIf="msg; then update_msg; else error_msg"></div>
+
+<ng-template #error_msg>
+    There was an error in NGIF
+</ng-template>
+
+<ng-template #update_msg>
+    This is an updated msg
+</ng-template>
+
+<h2>{{print1}}</h2>
+
+<div *ngFor = "let a of contacts">
+    <h2>{{a.fn}} {{a.ln}}</h2>
+</div>
+
+<div *ngFor="let a of contacts; index as i; first as f; last as l; even as e; odd as o">
+    <li *ngIf="e" style="background-color: yellow;">
+        {{ i + 1 }} {{ a.ID }} {{ a.fn }}
+    </li>
+
+    <li *ngIf="o" style="background-color: yellowgreen;">
+        {{ i + 1 }} {{ a.ID }} {{ a.fn }}
+    </li>
+
+    <li *ngIf="f" style="background-color: yellow;">
+        {{ i + 1 }} {{ a.ID }} {{ a.fn }}
+    </li>
+
+    <li *ngIf="l" style="background-color: greenyellow;">
+        {{ i + 1 }} {{ a.ID }} {{ a.fn }}
+    </li>
+</div>
+
+<table>
+    <tr>
+        <th>Index</th>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    <tbody *ngFor="let a of contacts; index as i; even as e; odd as o">
+        <tr *ngIf="e" style="background-color: yellow;">
+            <td>{{ i + 1 }}</td>
+            <td>{{ a.ID }}</td>
+            <td>{{ a.fn }}</td>
+            <td>{{ a.ln }}</td>
+        </tr>
+        <tr *ngIf="o" style="background-color: yellowgreen;">
+            <td>{{ i + 1 }}</td>
+            <td>{{ a.ID }}</td>
+            <td>{{ a.fn }}</td>
+            <td>{{ a.ln }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<app-comp1></app-comp1>
+<app-comp2></app-comp2>
+<app-comp3></app-comp3> -->

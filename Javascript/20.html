@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal {
+            constructor(name, color) {
+                this.name = name
+                this.color = color
+            }
+
+            run() {
+                console.log(this.name + " is running towards the human")
+            }
+
+            shout() {
+                console.log(this.name + " is shouting at the Coconut")
+            }
+        }
+
+        class Monkey extends Animal {
+            throwBanana() {
+                console.log(this.name + " is throwing the banana")
+            }
+        }
+
+        let a = new Animal("Gene", "clear")
+        let b = new Monkey("Patrick", "pink")
+
+        a.shout()
+        b.run()
+        b.climbTree()
+
+    </script>
+</body>
+</html>

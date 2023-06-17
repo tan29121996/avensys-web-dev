@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = {
+            name: "Nithin",
+            language: "javascript",
+            run: () => {
+                console.log("run from A")
+            }
+        }
+
+        console.log(a)
+        let p = {
+            run: () => {
+                console.log("run it")
+            },
+            test: () => {
+                console.log("test it")
+            }
+        }
+        
+        p.__proto__ = {
+            name: "Siddu"
+        }
+
+        a.__proto__ = p
+        a.run()
+
+    </script>
+</body>
+
+</html>

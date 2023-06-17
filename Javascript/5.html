@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .r {
+            background-color: red;
+        }
+
+        .y {
+            font-size: 30px;
+        }
+        .b {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a">This div has class a
+        <div class="b" id="id1">element 1</div>
+        <div class="b">element 2</div>
+        <div class="c" id="id2">element 1<span class="sp">Inside the element</span></div>
+        <div id="data" class="hhh" data-nithin="javascript" data-siddu="are we clear"></div>
+    </div>
+
+    <div id="first" class="r y">
+        <span>Hello</span>
+    </div>
+
+    <button id="toggle">Toggle</button>
+
+    <script>
+        // let id1 = document.getElementById("id1")
+        // let id2 = document.getElementById("id2")
+        // let a = document.getElementsByClassName("a")[0]
+        // let sp1 = document.getElementsByClassName("sp")[0]
+
+        // console.log(id1)
+        // console.log(id1.matches(".b"))
+        // console.log(id1.closest(".a"))
+        // console.log(id1.closest(".c"))
+        // console.log(id1.closest(".sp"))
+        // console.log(id1.contains(id2))
+
+        // let data = document.getElementById("data")
+        // console.log(data)
+        // console.log(data.dataset)
+        // console.log(data.dataset.nithin)
+        // console.log(data.dataset.siddu)
+
+        let f = document.getElementById("first")
+        document.getElementById("toggle").addEventListener("click", function () {
+            f.classList.toggle("b");
+        });
+    </script>
+</body>
+
+</html>

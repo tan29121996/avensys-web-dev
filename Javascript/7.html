@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="container" onmouseenter="console.log('block entered')">
+        <button onclick="alert('hello'); let g=10; console.log(g)">Click</button>
+    </div>
+
+    <button id="btn">Click</button>
+
+    <script>
+        let x = function(e) {
+            console.log(e)
+            console.log(event.type, event.clientx, event.clienty)
+            console.log("First")
+        }
+
+        let y = function() {
+            console.log("Second")
+        }
+
+        let btn = document.getElementById("btn")
+
+        btn.addEventListener('click', x)
+
+        btn.addEventListener('click', y)
+
+        let c = prompt("Enter number")
+        if (c == '2') {
+            btn.removeEventListener('click', x)
+        }
+
+        let a = document.getElementById("container")
+        a.onclick = () => {
+            let b = document.getElementById("container").innerHTML = "<h2>replaced by text</h2>"
+        }
+    </script>
+</body>
+</html>

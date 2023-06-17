@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class Rform {
+            constructor(name, quote, address) {
+                this.name = name
+                this.quote = quote
+                this.address = address
+            }
+
+            submit() {
+                console.log(this.name + " says '" + this.quote + "' while staying in " + this.address)
+            }
+            cancel() {
+                this.quote = "I don't want this"
+                console.log(this.name + " cancelled the ticket and says " + this.quote)
+                console.log("Quote was changed")
+            }
+        }
+
+        let nithin = new Rform("Nithin", "Hello", "Karnataka")
+        let siddu = new Rform("Siddu", "You are understanding my point. What is my point, if you ask me... Are we clear? I want answers!", "Karnataka")
+
+        nithin.submit()
+        siddu.submit()
+        nithin.cancel()
+        siddu.cancel()
+    </script>
+</body>
+</html>

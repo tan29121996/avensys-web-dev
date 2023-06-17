@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let f = () => {
+            try {
+                let age = prompt("Enter your age:");
+
+                if (age > 100) {
+                    throw new ReferenceError("No people over 100 allowed.");
+                    return
+                }
+            }
+            catch (error) {
+                console.log(error.message)
+                console.log(error.name)
+                console.log(error.stack)
+            }
+            finally {
+                console.log("This is your final warning")
+            }
+        }
+
+        f()
+    </script>
+</body>
+
+</html>

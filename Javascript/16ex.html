@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let f = () => {
+        //     try {
+        //         let age = prompt("Enter your age:");
+
+        //         if (age > 100) {
+        //             throw new ReferenceError("No people over 100 allowed.");
+        //             return
+        //         }
+        //     }
+        //     catch (error) {
+        //         console.log(error.message)
+        //         console.log(error.name)
+        //         console.log(error.stack)
+        //     }
+        //     finally {
+        //         console.log("This is your final warning")
+        //     }
+        // }
+
+        // f()
+
+        // const loadScript = async (src) => {
+        //     try {
+        //         await new Promise((resolve, reject) => {
+        //             let script = document.createElement("script");
+        //             script.src = src;
+        //             document.body.appendChild(script);
+        //             script.onload = () => {
+        //                 resolve(src);
+        //             };
+        //             script.onerror = () => {
+        //                 reject(new Error("Failed to load script"));
+        //             };
+        //         });
+
+        //         alert("Script loaded successfully!");
+        //     } catch (error) {
+        //         console.error(error);
+        //     }
+        // };
+
+        // loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js");
+
+        let p1 = new Promise(resolve => {
+            setTimeout(() => {
+                resolve("Promise 1 resolved");
+            }, 3000);
+        });
+
+        let p2 = new Promise(resolve => {
+            setTimeout(() => {
+                resolve("Promise 2 resolved");
+            }, 2000);
+        });
+
+        let p3 = new Promise(resolve => {
+            setTimeout(() => {
+                resolve("Promise 3 resolved");
+            }, 1000);
+        });
+
+        // All at once
+        // async function results() {
+        //     try {
+        //         // All three
+        //         let results = await Promise.all([p1, p2, p3]);
+        //         console.log(results);
+        //     } catch (error) {
+        //         console.error(error);
+        //     }
+        // }
+
+        // One by one
+        const results = async () => {
+            let results = await Promise.all([p1, p2, p3]);
+            let timeout = 1000;
+            await results.forEach((result) => {
+                timeout += 1000;
+                setTimeout(() => {
+                    console.log(result);
+                }, timeout);
+            })
+        };
+
+        results()
+    </script>
+</body>
+
+</html>

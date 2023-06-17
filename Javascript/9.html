@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let promise = new Promise(function (resolve, reject) {
+            console.log("from the promise1 block")
+            setTimeout(function () {
+                console.log("execute after 2 sec: promise 1")
+                resolve("resolved")
+            }, 3000)
+        })
+
+        let promise2 = new Promise(function (resolve, reject) {
+            console.log("from the promise2 block")
+            setTimeout(function () {
+                console.log("execute after 2 sec: promise 2")
+                reject(new Error("this is an error"))
+            }, 3000)
+        })
+
+        console.log(promise)
+
+        promise.then((value) => {
+            console.log(value)
+        })
+
+        promise2.catch((value) => {
+            console.log(value)
+        }, (error) => {
+            console.log("promise 2 error")
+        })
+    </script>
+</body>
+
+</html>

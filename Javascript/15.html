@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        setTimeout(() => {
+            console.log("Installing free malware...")
+        }, 1000)
+
+        try {
+            console.log(abcd)
+        }
+        catch (e) {
+            console.log("Don't write this again. " + e)
+        }
+
+        // Error catch fails due to setTimeout executing outside try method
+        try {
+            setTimeout(() => {
+                console.log(abcd)
+            }, 3000)
+        }
+        catch (e) {
+            console.log("Don't write this again. " + e)
+        }
+
+        try {
+            setTimeout(() => {
+                try {
+                    console.log(abcd)
+                }
+                catch (e) {
+                    console.log("Don't write this again. " + e)
+                }
+            }, 3000)
+        }
+        catch (e) {
+            console.log("Don't write this again. " + e)
+        }
+
+        setTimeout(() => {
+            console.log("Deleting system files...")
+        }, 2000)
+        setTimeout(() => {
+            console.log("Stealing user data...")
+        }, 3000)
+        setTimeout(() => {
+            console.log("Process completed successfully.")
+        }, 4000)
+    </script>
+</body>
+
+</html>

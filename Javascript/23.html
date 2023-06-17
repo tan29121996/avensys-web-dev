@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class Animal {
+            constructor(name) {
+                this._name = name
+            }
+
+            fly() {
+                console.log("flying")
+            }
+
+            get name() {
+                return this._name
+            }
+
+            set name(newName) {
+                this._name = newName
+            }
+        }
+
+        class Rabbit extends Animal {
+            eat() {
+                console.log("eating carrot")
+            }
+        }
+
+        let r = new Rabbit("Bugs")
+        let a = new Animal("cuckoo")
+        a.fly()
+        console.log(a.name)
+        a.name = "cockerel"
+        console.log(a.name)
+        console.log(a instanceof Animal)
+        console.log(r instanceof Rabbit)
+        console.log(r instanceof Animal)
+    </script>
+</body>
+</html>

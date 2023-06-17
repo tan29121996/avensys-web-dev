@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="a">
+        <div class="b">
+            <h3>child of div b</h3>
+        </div>
+        <h1>The heading</h1>
+        <h3>h3</h3>
+    </div>
+    <script>
+        let a = document.getElementsByTagName("body")[0];
+        console.log(a.firstChild);
+        console.log(a.firstElementChild);
+        console.log(a.lastElementChild);
+        console.log(a.lastChild);
+        let b = Array.from(document.body.childNodes);
+        console.log(b.parentNode);
+        console.log(b.parentElement);
+        console.log(b.firstElementChild);
+        console.log(b.nextSibling);
+        let c = document.getElementById("h");
+        console.log(b.previousSibling);
+        console.log(b.previousElementSibling);
+    </script>
+</body>
+
+</html>

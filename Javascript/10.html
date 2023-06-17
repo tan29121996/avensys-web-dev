@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let p1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("resolved after 2 seconds")
+                resolve(100)
+            }, 2000)
+        }).then((value) => {
+            console.log(value)
+            let p2 = new Promise((resolve, reject) => {
+                // resolve("promise")
+                reject("rejected")
+            })
+            return p2
+
+        }).then((value) => {
+            console.log("Finished")
+        }).then((value) => {
+            console.log("last line")
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee {
+            constructor(name) {
+                console.log(name + " is the employee's name")
+                this.name = name
+            }
+
+            login() {
+                console.log("logged in")
+            }
+
+            logout() {
+                console.log("logged out")
+            }
+
+            requestLeaves(leaves) {
+                console.log("all employees will be receiving a free vacation to the Bahamas")
+                console.log("on leave for " + leaves + " days")
+            }
+        }
+
+        class Trainer extends Employee {
+            constructor(name, id) {
+                super(name)
+                this.id = id
+                console.log("free vacation to the Bahamas given from the new constructor " + id)
+            }
+
+            askTrainees() {
+                console.log("asking trainess: 'Are you clear? I want answers'")
+            }
+
+            requestLeaves(leaves) {
+                super.requestLeaves(leaves)
+                console.log("on leave for " + leaves + " to train Pokemon")
+            }
+        }
+
+        let s = new Trainer("Siddu", 12)
+        s.requestLeaves(1000000000)
+        s.askTrainees()
+        // let commonE = new Employee("Sathish")
+        // commonE.requestLeaves(1000000001)
+
+    </script>
+</body>
+</html>

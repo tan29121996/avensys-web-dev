@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const h = async () => {
+            let country1 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("28 deg")
+                }, 1000)
+            })
+
+            let country2 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("35 deg")
+                }, 2000)
+            })
+
+            let c1 = await country1
+            console.log("c1: " + c1)
+            let c2 = await country2
+            console.log("c2: " + c2)
+
+            return [c1, c2]
+        }
+
+        let c = async () => {
+            console.log("Output from C")
+        }
+
+        let all = async () => {
+            let a = await h()
+            let b = await c()
+        }
+
+        all()
+    </script>
+</body>
+
+</html>
